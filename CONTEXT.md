@@ -24,9 +24,21 @@ _Avoid_: row, column (they hide that there are three directions, not two)
 The sequence of numbers attached to a Line, giving the lengths of the runs of filled Cells along it, in order.
 _Avoid_: hint, number
 
+**Mark**:
+The player's state for a Cell: **Filled** (the player believes it's part of the solution), **Crossed** (the player believes it isn't), or **Blank** (undecided). Only Filled counts toward satisfying Clues.
+_Avoid_: paint, flag
+
+**Satisfied** (of a Clue):
+The Filled Cells along the Clue's Line form exactly the runs the Clue describes.
+
+**Solved** (of a Puzzle):
+Every Clue on the Board is Satisfied. An arrangement that satisfies every Clue counts as solved even if it differs from the authored solution.
+_Avoid_: complete, matching the solution
+
 ## Relationships
 
 - A **Puzzle** has exactly one **Board**
 - A **Board** is made of **Cells**
+- A **Board** is hexagon-shaped
 - Every **Cell** lies on exactly three **Lines**, one per axis
-- A **Line** carries at most one **Clue** (which axes carry Clues is still open)
+- Every **Line**, on all three axes, has exactly one **Clue**
