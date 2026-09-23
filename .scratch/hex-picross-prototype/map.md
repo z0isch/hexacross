@@ -27,12 +27,13 @@ A playable Usagi prototype of hex-picross: 3–5 small, hand-authored, abstract-
 <!-- one line per closed ticket: - [<title>](issues/NN-slug.md) — <gist> -->
 - [Hex nonogram prior art](issues/01-hex-nonogram-prior-art.md) — little prior art; start flat-top Cells, pinwheel Clue layout, radius 3; tying Clues to Lines is the known weak spot; avoid symmetric Puzzles and the alternating six-Cell-ring ambiguity; drag-painting expected
 - [Clue layout and screen resolution](issues/02-clue-layout-and-resolution.md) — pointy-top, 480×270, Cell size 16 at radius 3; pinwheel Clues stepped along each Line (10 px); hover highlights the three Lines; Satisfied Clues grey out; prototype on branch `prototype/clue-layout`
+- [Puzzle authoring format](issues/03-puzzle-authoring-format.md) — ASCII-art Solution strings laid out like the pointy-top Board (`#`/`.`), one ordered `puzzles.lua` list of `{name, solution}`; axial `(q, r)` from the prototype; strict load-time validation
 
 ## Not yet specified
 
 - **Uniqueness checker / solver.** A small offline tool that tells whether a Puzzle has exactly one solution and needs no guessing. Whether it's needed depends on how the hand-authored Puzzles play in the playtest ticket. If they keep turning out ambiguous, this graduates. The [prior-art research](issues/01-hex-nonogram-prior-art.md) already found one ambiguous pattern: fill every other Cell of a six-Cell ring around a Blank centre, with nothing Filled next to it, and the other three Cells give identical Clues. So the checker looks likely to graduate.
 - **Board size per Puzzle.** Radius 3 at Cell size 16 is known to fit at 480×270. Still open: whether every Puzzle uses radius 3, or whether radius 2 or 4 (the latter would need a smaller Cell size) earns a place. The playtest will show this.
-- **Puzzle switching.** The minimal UI for moving between Puzzles (keys, a menu item via `usagi.menu_item`, a select screen). Probably small enough to decide during the final build.
+- **Puzzle switching.** The minimal UI for moving between Puzzles (keys, a menu item via `usagi.menu_item`, a select screen). Probably small enough to decide during the final build. The Puzzles already have an order (the `puzzles.lua` list) and a `name` to show.
 
 ## Out of scope
 

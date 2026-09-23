@@ -5,8 +5,12 @@ A picross/nonogram-style logic puzzle played on a grid of hexagons instead of sq
 ## Language
 
 **Puzzle**:
-One authored challenge: a Board plus its hidden solution, from which the Clues are derived.
+One authored challenge: a Board plus its hidden Solution, from which the Clues are derived.
 _Avoid_: level, picture, nonogram (as a noun for one puzzle)
+
+**Solution**:
+The authored set of Cells that are Filled; every Clue is derived from it. Solving a Puzzle doesn't require reproducing it.
+_Avoid_: answer, key
 
 **Board**:
 The whole grid of Cells for one Puzzle.
@@ -32,12 +36,12 @@ _Avoid_: paint, flag
 The Filled Cells along the Clue's Line form exactly the runs the Clue describes.
 
 **Solved** (of a Puzzle):
-Every Clue on the Board is Satisfied. An arrangement that satisfies every Clue counts as solved even if it differs from the authored solution.
+Every Clue on the Board is Satisfied. An arrangement that satisfies every Clue counts as Solved even if it differs from the Solution.
 _Avoid_: complete, matching the solution
 
 ## Relationships
 
-- A **Puzzle** has exactly one **Board**
+- A **Puzzle** has exactly one **Board** and exactly one **Solution**
 - A **Board** is made of **Cells**
 - A **Board** is hexagon-shaped
 - Every **Cell** lies on exactly three **Lines**, one per axis
