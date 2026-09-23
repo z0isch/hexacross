@@ -29,6 +29,7 @@ A playable Usagi prototype of hex-picross: six small, hand-authored, abstract-pa
 - [Clue layout and screen resolution](issues/02-clue-layout-and-resolution.md) — pointy-top, 480×270, Cell size 16 at radius 3; pinwheel Clues stepped along each Line (10 px); hover highlights the three Lines; Satisfied Clues grey out; prototype on branch `prototype/clue-layout`
 - [Puzzle authoring format](issues/03-puzzle-authoring-format.md) — ASCII-art Solution strings laid out like the pointy-top Board (`#`/`.`), one ordered `puzzles.lua` list of `{name, solution}`; axial `(q, r)` from the prototype; strict load-time validation
 - [Playtest hand-authored Puzzles](issues/04-playtest-hand-authored-puzzles.md) — plays well; all six Puzzles kept (radius 2–4, Cell size auto-fit); three-axis Clues are almost never ambiguous, so no uniqueness checker; orange 1 px hover outline, brown for hovered Satisfied Clues, no guide arrows; Auto-Cross on Satisfied Lines; prototype on branch `prototype/playtest`
+- [Build the playable prototype](issues/05-build-playable-prototype.md) — built at the repo root (`main.lua`, `puzzles.lua`); playtest settings kept, toggles dropped; Puzzle switching is Left/Right plus pause-menu items, Marks kept per Puzzle, Backspace clears
 
 ## Not yet specified
 
