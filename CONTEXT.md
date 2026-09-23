@@ -32,6 +32,10 @@ _Avoid_: hint, number
 The player's state for a Cell: **Filled** (the player believes it's part of the solution), **Crossed** (the player believes it isn't), or **Blank** (undecided). Only Filled counts toward satisfying Clues.
 _Avoid_: paint, flag
 
+**Auto-Cross**:
+A Crossed Mark the game places on every Blank Cell of a Line whose Clue is Satisfied. It exists only while some Line through that Cell is Satisfied, and disappears when none is. A Cross the player places by hand is never removed by the game.
+_Avoid_: auto-fill, hint
+
 **Satisfied** (of a Clue):
 The Filled Cells along the Clue's Line form exactly the runs the Clue describes.
 
